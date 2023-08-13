@@ -1,405 +1,320 @@
-
+"use strict";
 // Question 1
-const name = "Eric";
-console.log(`Hello ${name}, would you like to learn some Python today?`);
-
+// Install Node.js, TypeScript and VS Code on your computer
 // Question 2
-const personName = "John Smith";
-console.log(personName.toLowerCase());
-console.log(personName.toUpperCase());
-console.log(personName.charAt(0).toUpperCase() + personName.slice(1).toLowerCase());
-
+console.log("This is staring of Assignment");
+const personName = "Eric";
+console.log(`Hello ${personName}, would you like to learn some Python today?`);
 // Question 3
+const personName1 = "azeem babar is great man";
+const toTitleCase = (inputString) => inputString.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
+const titleCaseOutput = toTitleCase(personName1);
+console.log(titleCaseOutput);
+// Question 4
 const quote = 'A person who never made a mistake never tried anything new.';
 const author = 'Albert Einstein';
 console.log(`${author} once said, "${quote}"`);
-
-// Question 4
-const famousPerson = 'Albert Einstein';
-const message = `Hello ${famousPerson}, would you like to learn some Python today?`;
-console.log(message);
-
 // Question 5
-const personNameWithWhitespace = "\t  John Doe\n";
-console.log(personNameWithWhitespace);
-console.log(personNameWithWhitespace.trim());
-
+const famous_person = 'Albert Einstein';
+const message = `${famous_person} once said, "${quote}"`;
+console.log(message);
 // Question 6
+const nameWithWhitespace = '\t   John Doe  \n';
+console.log(nameWithWhitespace);
+console.log(nameWithWhitespace.trim());
+// Question 7, 8
 console.log(5 + 3);
 console.log(10 - 2);
-console.log(2 * 4);
+console.log(4 * 2);
 console.log(16 / 2);
-
-// Question 7
-const favoriteNumber = 42;
-console.log(`My favorite number is ${favoriteNumber}.`);
-
-// Question 8
-// Adding comments to two programs:
-// Program 1: Calculates the area of a rectangle
-const length = 5;
-const width = 3;
-const area = length * width;
-console.log(`The area of the rectangle is ${area}.`);
-
-// Program 2: Converts temperature from Celsius to Fahrenheit
-const celsius = 25;
-const fahrenheit = (celsius * 9) / 5 + 32;
-console.log(`${celsius} degrees Celsius is equal to ${fahrenheit} degrees Fahrenheit.`);
-
 // Question 9
-const names = ['John', 'Jane', 'Alice'];
-names.forEach((name) => {
-  console.log(name);
-});
-
+const favoriteNumber = 42;
+console.log(`My favorite number is ${favoriteNumber}`);
 // Question 10
-const greetings = 'Hello, ';
-names.forEach((name) => {
-  console.log(greetings + name + '!');
-});
-
+// Program 1: This program calculates the sum of two numbers
+const num1 = 5;
+const num2 = 3;
+console.log(num1 + num2);
+// Program 2: This program checks if a given number is even or odd
+const number = 17;
+if (number % 2 === 0) {
+    console.log("The number is even.");
+}
+else {
+    console.log("The number is odd.");
+}
 // Question 11
-const transportationModes = ['car', 'motorcycle', 'bicycle'];
-transportationModes.forEach((mode) => {
-  console.log(`I would like to own a ${mode}.`);
-});
-
+const names = ["John", "Jane", "Alice"];
+names.forEach((personName) => console.log(personName));
 // Question 12
-const dinnerGuests = ['Albert Einstein', 'Isaac Newton', 'Marie Curie'];
-dinnerGuests.forEach((guest) => {
-  console.log(`Dear ${guest}, you are invited to dinner. Please RSVP.`);
-});
-
+const names1 = ["John", "Jane", "Alice"];
+names1.forEach((personName) => console.log(`Hello ${personName}, it's nice to see you.`));
 // Question 13
-console.log(`${dinnerGuests[1]} can't make it to dinner.`);
-dinnerGuests[1] = 'Nikola Tesla';
-dinnerGuests.forEach((guest) => {
-  console.log(`Dear ${guest}, you are invited to dinner. Please RSVP.`);
-});
-
+const transportation = ["car", "motorcycle", "bicycle"];
+transportation.forEach((item) => console.log(`I would like to own a ${item}.`));
 // Question 14
-console.log('Good news! The dinner table got bigger.');
-const additionalGuests = ['Galileo Galilei', 'Charles Darwin', 'Ada Lovelace'];
-dinnerGuests.push(...additionalGuests);
-dinnerGuests.forEach((guest) => {
-  console.log(`Dear ${guest}, you are invited to dinner. Please RSVP.`);
-});
-
+const guests = ["Albert Einstein", "Marie Curie", "Nikola Tesla"];
+guests.forEach((guest) => console.log(`Dear ${guest}, you are invited to dinner. Please join us.`));
 // Question 15
-console.log('Unfortunately, the dinner table will not arrive on time.');
-console.log('We can only invite two guests for dinner.');
-while (dinnerGuests.length > 2) {
-  const removedGuest = dinnerGuests.pop();
-  console.log(`Sorry, ${removedGuest}, we can't invite you to dinner.`);
-}
-dinnerGuests.forEach((guest) => {
-  console.log(`Dear ${guest}, you are still invited to dinner. Please RSVP.`);
-});
-dinnerGuests.length = 0;
-console.log(dinnerGuests);
-
+const guests1 = ["Albert Einstein", "Marie Curie", "Nikola Tesla"];
+console.log(`${guests1[1]} can't make it to dinner.`);
+guests[1] = "Isaac Newton";
+guests.forEach((guest) => console.log(`Dear ${guest}, you are still invited to dinner. Please join us.`));
 // Question 16
-const placesToVisit = ['Paris', 'Tokyo', 'Rome', 'New York', 'Sydney'];
-console.log('Original order:');
-console.log(placesToVisit);
-console.log('Alphabetical order:');
-console.log(placesToVisit.sort());
-console.log('Original order:');
-console.log(placesToVisit);
-console.log('Reverse alphabetical order:');
-console.log(placesToVisit.reverse());
-console.log('Original order:');
-console.log(placesToVisit);
-console.log('Reversed order:');
-console.log(placesToVisit.reverse());
-console.log('Alphabetical order:');
-console.log(placesToVisit.sort());
-
+const guests2 = ["Albert Einstein", "Marie Curie", "Nikola Tesla"];
+console.log("Good news! We found a bigger dinner table.");
+guests2.unshift("Isaac Newton");
+guests2.splice(2, 0, "Galileo Galilei");
+guests2.push("Leonardo da Vinci");
+guests2.forEach((guest) => console.log(`Dear ${guest}, you are invited to dinner. Please join us.`));
 // Question 17
-const dinnerGuestCount = dinnerGuests.length;
-console.log(`There are ${dinnerGuestCount} people invited to dinner.`);
-
+const guests3 = ["Albert Einstein", "Marie Curie", "Nikola Tesla"];
+console.log("We apologize, but the new dinner table won't arrive in time for the dinner.");
+console.log("We can only invite two guests for dinner.");
+while (guests3.length > 2) {
+    const removedGuest = guests3.pop();
+    console.log(`Sorry ${removedGuest}, we can't invite you to dinner.`);
+}
+guests.forEach((guest) => console.log(`Dear ${guest}, you are still invited to dinner. Please join us.`));
+guests.length = 0;
+console.log(guests);
 // Question 18
-const items = ['mountain', 'river', 'country', 'city', 'language'];
-console.log(items);
-
+const placesToVisit = ["Paris", "Tokyo", "Cairo", "New York", "Rome"];
+console.log("Original order:");
+console.log(placesToVisit);
+console.log("Alphabetical order:");
+console.log(placesToVisit.slice().sort());
+console.log("Original order (still):");
+console.log(placesToVisit);
+console.log("Reverse alphabetical order:");
+console.log(placesToVisit.slice().sort().reverse());
+console.log("Original order (still):");
+console.log(placesToVisit);
+placesToVisit.reverse();
+console.log("Reversed order:");
+console.log(placesToVisit);
+placesToVisit.reverse();
+console.log("Original order (reversed again):");
+console.log(placesToVisit);
+console.log("Sorted order:");
+console.log(placesToVisit.slice().sort());
+console.log("Reverse sorted order:");
+console.log(placesToVisit.slice().sort().reverse());
 // Question 19
-const favoriteThings = {
-  mountains: ['Mount Everest', 'Mount Kilimanjaro'],
-  rivers: ['Amazon River', 'Nile River'],
-  countries: ['Italy', 'Australia'],
-  cities: ['Paris', 'Tokyo'],
-  languages: ['Spanish', 'Mandarin'],
-};
-console.log(favoriteThings);
-
+const dinnerGuests = ["Albert Einstein", "Marie Curie", "Nikola Tesla"];
+console.log(`The number of people invited to dinner is ${dinnerGuests.length}.`);
 // Question 20
-// Intentional error:
-const fruits = ['apple', 'banana', 'orange'];
-console.log(fruits[3]); // Accessing an index that doesn't exist
-
+const items = ["mountains", "rivers", "countries", "cities", "languages"];
+// Array of items
+console.log(items);
+// Array of TypeScript objects
+const objects = [
+    { name: "mountains" },
+    { name: "rivers" },
+    { name: "countries" },
+    { name: "cities" },
+    { name: "languages" },
+];
+console.log(objects);
 // Question 21
-console.log("Conditional tests:");
-console.log("Is car == 'subaru'? I predict True.");
-console.log(car === 'subaru');
-console.log("Is car == 'honda'? I predict False.");
-console.log(car === 'honda');
-console.log("Is 5 > 3? I predict True.");
-console.log(5 > 3);
-console.log("Is 10 < 7? I predict False.");
-console.log(10 < 7);
-console.log("Is 4 === 4? I predict True.");
-console.log(4 === 4);
-console.log("Is 2 !== 2? I predict False.");
-console.log(2 !== 2);
-console.log("Is 'apple' === 'orange'? I predict False.");
-console.log('apple' === 'orange');
-console.log("Is 'cat' !== 'dog'? I predict True.");
-console.log('cat' !== 'dog');
-console.log("Is 'apple' !== 'banana' && 5 > 2? I predict True.");
-console.log('apple' !== 'banana' && 5 > 2);
-console.log("Is 'orange' === 'apple' || 10 < 5? I predict False.");
-console.log('orange' === 'apple' || 10 < 5);
-console.log("Is 'apple' in fruits? I predict True.");
-console.log(fruits.includes('apple'));
-console.log("Is 'kiwi' in fruits? I predict False.");
-console.log(fruits.includes('kiwi'));
-
+console.log(items[10]); // This will throw an "index out of bounds" error
 // Question 22
-const alienColor = 'green';
-if (alienColor === 'green') {
-  console.log('You just earned 5 points!');
-}
-
+const car = "subaru";
+console.log(`Is car == 'subaru'? I predict ${car == "subaru"}.`);
+// Add more conditional tests...
 // Question 23
-const alienColor1 = 'red';
-if (alienColor1 === 'green') {
-  console.log('You just earned 5 points for shooting the alien.');
-} else {
-  console.log('You just earned 10 points!');
-}
-
+const car1 = "Subaru";
+console.log(car1 == "subaru");
+console.log(car1.toLowerCase() == "subaru");
+// Add more conditional tests...
 // Question 24
-const alienColor2 = 'yellow';
-if (alienColor2 === 'green') {
-  console.log('You just earned 5 points!');
-} else if (alienColor2 === 'yellow') {
-  console.log('You just earned 10 points!');
+const alienColor = "green";
+if (alienColor === "green") {
+    console.log("The player just earned 5 points.");
 }
-
+// Add another version of this program that fails the if test
 // Question 25
-const age = 25;
-
-if (age < 2) {
-  console.log("The person is a baby.");
-} else if (age >= 2 && age < 4) {
-  console.log("The person is a toddler.");
-} else if (age >= 4 && age < 13) {
-  console.log("The person is a kid.");
-} else if (age >= 13 && age < 20) {
-  console.log("The person is a teenager.");
-} else if (age >= 20 && age < 65) {
-  console.log("The person is an adult.");
-} else {
-  console.log("The person is an elder.");
+const alienColor1 = "green";
+if (alienColor1 === "green") {
+    console.log("The player just earned 5 points for shooting the alien.");
 }
-
+else {
+    console.log("The player just earned 10 points.");
+}
+// Add another version of this program that runs the else block
 // Question 26
-const favoriteFruits = ["banana", "apple", "orange"];
-
-if (favoriteFruits.includes("banana")) {
-  console.log("You really like bananas!");
+const alienColor2 = "yellow";
+if (alienColor2 === "green") {
+    console.log("The player just earned 5 points.");
 }
-
-// Add more if statements for other fruits
-
-// Question 27
-const userName1 = ["admin", "user1", "user2", "user3", "user4"];
-
-userName1.forEach((name) => {
-  if (name === "admin") {
-    console.log("Hello admin, would you like to see a status report?");
-  } else {
-    console.log(`Hello ${name}, thank you for logging in again.`);
-  }
-});
-
+else if (alienColor2 === "yellow") {
+    console.log("The player just earned 10 points.");
+}
+else if (alienColor2 === "red") {
+    console.log("The player just earned 15 points.");
+}
+// Add three versions of this program, one for each color
 // Question 28
-const userName = ["admin", "user1", "user2", "user3", "user4"];
-
-if (userName.length === 0) {
-  console.log("We need to find some users!");
+const age = 25;
+if (age < 2) {
+    console.log("The person is a baby.");
 }
-
-// Remove all usernames from the array and check the message
-
+else if (age >= 2 && age < 4) {
+    console.log("The person is a toddler.");
+}
+else if (age >= 4 && age < 13) {
+    console.log("The person is a kid.");
+}
+else if (age >= 13 && age < 20) {
+    console.log("The person is a teenager.");
+}
+else if (age >= 20 && age < 65) {
+    console.log("The person is an adult.");
+}
+else {
+    console.log("The person is an elder.");
+}
 // Question 29
-const currentUsers = ["user1", "user2", "user3"];
-const newUsers = ["user2", "user4", "user5"];
-
-newUsers.forEach((user) => {
-  if (currentUsers.includes(user)) {
-    console.log(`Sorry, ${user}, you will need to enter a new username.`);
-  } else {
-    console.log(`Congratulations, ${user}, your username is available.`);
-  }
-});
-
-// Question 30
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-numbers.forEach((number) => {
-  let ending;
-  switch (number) {
-    case 1:
-      ending = "st";
-      break;
-    case 2:
-      ending = "nd";
-      break;
-    case 3:
-      ending = "rd";
-      break;
-    default:
-      ending = "th";
-  }
-  console.log(`${number}${ending}`);
-});
-
-// Question 31
-const pizzaNames = ["pepperoni", "margherita", "veggie"];
-
-pizzaNames.forEach((pizzaName) => {
-  console.log(`I like ${pizzaName} pizza.`);
-});
-
-console.log("I really love pizza!");
-
-// Question 32
-const animals = ["dog", "cat", "rabbit"];
-
-animals.forEach((animal) => {
-  console.log(`A ${animal} would make a great pet.`);
-});
-
-console.log("Any of these animals would make a great pet!");
-
-// Question 33
-function make_shirt1(size, message) {
-  console.log(`You ordered a ${size} shirt with the message: "${message}".`);
+const favoriteFruits = ["banana", "apple", "orange"];
+if (favoriteFruits.includes("banana")) {
+    console.log("You really like bananas!");
 }
-
+// Add more if statements for other fruits
+// Question 30
+const userName1 = ["admin", "user1", "user2", "user3", "user4"];
+userName1.forEach((name) => {
+    if (name === "admin") {
+        console.log("Hello admin, would you like to see a status report?");
+    }
+    else {
+        console.log(`Hello ${name}, thank you for logging in again.`);
+    }
+});
+// Question 31
+const userName = ["admin", "user1", "user2", "user3", "user4"];
+if (userName.length === 0) {
+    console.log("We need to find some users!");
+}
+// Remove all usernames from the array and check the message
+// Question 32
+const currentUsers = ["User1", "user2", "user3"];
+const newUsers = ["user1", "user4", "user5"];
+const lowercaseCurrentUsers = currentUsers.map(user => user.toLowerCase());
+newUsers.forEach((user) => {
+    const lowercaseUser = user.toLowerCase();
+    if (lowercaseCurrentUsers.includes(lowercaseUser)) {
+        console.log(`Sorry, ${user}, you will need to enter a new username.`);
+    }
+    else {
+        console.log(`Congratulations, ${user}, your username is available.`);
+    }
+});
+// Question 33
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+numbers.forEach((number) => {
+    let ending;
+    switch (number) {
+        case 1:
+            ending = "st";
+            break;
+        case 2:
+            ending = "nd";
+            break;
+        case 3:
+            ending = "rd";
+            break;
+        default:
+            ending = "th";
+    }
+    console.log(`${number}${ending}`);
+});
+// Question 34
+const pizzaNames = ["fageta", "malai-boti", "veggie"];
+pizzaNames.forEach((pizzaName) => {
+    console.log(`I like ${pizzaName} pizza.`);
+});
+console.log("I really love pizza!");
+// Question 35
+const animals = ["dog", "cat", "rabbit"];
+animals.forEach((animal) => {
+    console.log(`A ${animal} would make a great pet.`);
+});
+console.log("Any of these animals would make a great pet!");
+// Question 36
+function make_shirt1(size, message) {
+    console.log(`You ordered a ${size} shirt with the message: "${message}".`);
+}
 make_shirt1("L", "I love TypeScript");
 make_shirt1("M", "Hello World!");
 make_shirt1("S", "Coding is fun!");
-
-// Question 34
+// Question 37
 function make_shirt(size = "L", message = "I love TypeScript") {
-  console.log(`You ordered a ${size} shirt with the message: "${message}".`);
+    console.log(`You ordered a ${size} shirt with the message: "${message}".`);
 }
-
 make_shirt();
 make_shirt("M");
 make_shirt("S", "Hello World!");
-
-// Question 35
+// Question 38
 function describe_city(city, country = "Pakistan") {
-  console.log(`${city} is in ${country}.`);
+    console.log(`${city} is in ${country}.`);
 }
-
 describe_city("Karachi");
 describe_city("Lahore");
 describe_city("New York", "USA");
-
-// Question 36
+// Question 39
 function city_country(city, country) {
-  return `${city}, ${country}`;
+    return `${city}, ${country}.`;
 }
-
 console.log(city_country("Lahore", "Pakistan"));
 console.log(city_country("Tokyo", "Japan"));
 console.log(city_country("Paris", "France"));
-
-// Question 37
-function make_album(artist, title) {
-  return {
-    artist: artist,
-    title: title,
-  };
-}
-
+// Question 40
+const make_album = (artist, title) => ({ artist, title });
 const album11 = make_album("Artist 1", "Album 1");
 const album21 = make_album("Artist 2", "Album 2");
 const album31 = make_album("Artist 3", "Album 3");
-
 console.log(album11);
 console.log(album21);
 console.log(album31);
-
-// Question 38
-function make_album1(artist, title, tracks) {
-  const album = {
-    artist: artist,
-    title: title,
-  };
-
-  return album;
-}
-
-const album1 = make_album("Artist 1", "Album 1");
-const album2 = make_album("Artist 2", "Album 2");
-
-console.log(album1);
-console.log(album2);
-
-// Question 39
-function show_magicians(magicians) {
-  magicians.forEach((magician) => console.log(magician));
-}
-
-const magicians = ["Magician 1", "Magician 2", "Magician 3"];
+// Question 41
+const magicians = ["Harry Houdini", "David Copperfield", "Penn Jillette", "Teller"];
+const show_magicians = (names) => {
+    names.forEach(name => console.log(name));
+};
 show_magicians(magicians);
-
-// Question 40
-function make_great(magicians) {
-  return magicians.map((magician) => magician + " the Great");
-}
-
+// Question 42
+const make_great = (magicians) => {
+    return magicians.map((magician) => magician + " the Great");
+};
 const magicians1 = ["Magician 1", "Magician 2", "Magician 3"];
 const greatMagicians1 = make_great(magicians1);
-show_magicians(greatMagicians1);
-
-// Question 41
-function make_great1(magicians) {
-  return magicians.map((magician) => magician + " the Great");
-}
-
-const magicians2 = ["Magician 1", "Magician 2", "Magician 3"];
-const greatMagicians = make_great([...magicians2]);
-show_magicians(magicians2);
-show_magicians(greatMagicians);
-
-// Question 42
-function sandwich(...ingredients) {
-  console.log(`You ordered a sandwich with ${ingredients.join(", ")}.`);
-}
-
-sandwich("bread", "lettuce", "tomato");
-sandwich("bread", "cheese", "ham", "mayo", "mustard");
-sandwich("bread", "peanut butter", "jelly");
-
+console.log(greatMagicians1);
 // Question 43
+const make_great2 = (names) => names.map(name => `Great ${name}`);
+const show_magicians2 = (names) => names.forEach(name => console.log(name));
+const greatMagicians = make_great2([...magicians]);
+const originalMagicians = [...magicians];
+console.log("Original Magicians:");
+show_magicians2(originalMagicians);
+// Question 44
+const orderSandwich = (...items) => {
+    console.log("Sandwich Order:");
+    console.log(items.length === 0 ? "No items selected." : `Items: ${items.join(", ")}`);
+    console.log("=====================");
+};
+orderSandwich("Lettuce", "Tomato", "Cheese");
+orderSandwich("Turkey", "Bacon");
+orderSandwich("Avocado");
+orderSandwich(); // No items selected
+// Question 45
 function carInfo(manufacturer, model, options) {
-  const car = {
-    manufacturer: manufacturer,
-    model: model,
-  };
-
-  Object.assign(car, options);
-
-  console.log(car);
+    const car = {
+        manufacturer: manufacturer,
+        model: model,
+    };
+    Object.assign(car, options);
+    console.log(car);
 }
-
 carInfo("Honda", "Civic", { color: "blue", features: "GPS, Bluetooth" });
 carInfo("Toyota", "Corolla", { color: "red", features: "Backup camera" });
+console.log("This is End of Document");
